@@ -67,16 +67,20 @@ http://localhost:4004/odata/v4/catalog/Books
 
 ### ERR_UNSUPPORTED_ESM_URL_SCHEME
 - Cause: incompatible Node version
-- Fix: use Node 20 LTS
-- Then reinstall @sap/cds-dk and run cds watch again
+- Fix: install default package.json, install the SAP CAP runtime, install CAP’s development tools
 
-1. nvm install 20
-2. nvm use 20
-3. npm uninstall -g @sap/cds-dk
-4. npm install -g @sap/cds-dk
-5. cds -v
-6. npm install
-7. cds watch
+1. npm init -y
+2. npm install @sap/cds
+3. npm install --save-dev @sap/cds-dk
+4. cds watch
+
+### 'NO_DATABASE_CONNECTION'
+- Cause: Don't have database adapter
+- Fix: For local development, add CAP’s SQLite adapter
+
+1. npx cds add sqlite or npm install --save-dev @cap-js/sqlite
+2. cds watch
+
 
 ## Repository
 
