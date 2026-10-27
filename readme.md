@@ -47,19 +47,22 @@ http://localhost:4004/odata/v4/catalog/Books
 - Confirmed CAP welcome page on localhost:4004
 - Fixed Node 24 ESM issue by using Node 20 LTS
 
+### Build with me #12 - CAP data model for Agents and Tasks
+- Added db/schema.cds with Agents and Tasks
+- Defined association Task -> Agent
+- Exposed entities in AgentHubService
+
 ## Current Status
 
 - CAP project foundation is ready
-- Local server runs on port 4004
-- Sample Books service is available
-- Custom Agents/Tasks model not added yet
+- Agents and Tasks model defined
+- Service exposed
+- Sample data not added yet
 - Not connected to Next.js yet
-- No authentication yet
 
 ## Next Steps
 
-- #12 Define CAP data model for Agents and Tasks
-- Later: expose OData services for Agents/Tasks
+- #13 add sample data and test CAP OData endpoints
 - Later: connect Next.js BFF to CAP
 - Later: authentication patterns
 
